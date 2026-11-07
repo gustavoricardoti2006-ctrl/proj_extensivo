@@ -1,4 +1,5 @@
 <?php  
+    $msg = $_GET['msg'] ?? '';
     require_once("includes/conexao.php");
 
     $pesquisa = $_GET['pesquisar'] ?? '';
@@ -24,8 +25,10 @@
             ON p.id_produto = v.id_produto
             LEFT JOIN estoque e
             ON v.id_variacao = e.id_variacao
-            WHERE p.nome_prod LIKE ?
-            OR p.marca LIKE ?
+            WHERE ( 
+                p.nome_prod LIKE ?
+                OR p.marca LIKE ? 
+            )
             GROUP BY p.id_produto";
 
     $stmt = mysqli_prepare($con, $sql);
@@ -37,6 +40,9 @@
     mysqli_stmt_execute($stmt);
 
     $resultado = mysqli_stmt_get_result($stmt);
+
+    $total_produtos = mysqli_num_rows($resultado);
+    
 ?>
 
 <!DOCTYPE html>
@@ -52,8 +58,12 @@
     <header>Administração    <img src="img/warning.png" width="20px"></header>
     <h2>CATÁLOGO</h2>
     <h1>Gerenciamento de produtos</h1>
+    <?php if (!empty($msg)) { ?>
+        <p class="mensagem-sucesso">
+            <?= htmlspecialchars($msg) ?>
+        </p>
+    <?php } ?>
     <p>produtos cadastrados · precisam de atenção</p>
-
 
     <form action="" method="GET">
             <input type="text" id="pesquisar" name="pesquisar" placeholder="Buscar por nome/marca" 
@@ -83,10 +93,10 @@
                 
 
                 <tr>
-                    <td><?= $produto['nome_prod'] ?>
-                        <p><?= $produto['marca'] ?></p>
+                    <td><?= htmlspecialchars($produto['nome_prod']) ?>
+                        <p><?= htmlspecialchars($produto['marca']) ?></p>
                     </td>
-                    <td><?= $produto['nome_cat'] ?></td>
+                    <td><?= htmlspecialchars($produto['nome_cat']) ?></td>
                     <td>--</td>
                     <td>
                         R$ <?= number_format($produto['preco'], 2, ',', '.') ?>
@@ -96,8 +106,15 @@
                     </td>
                     <td><?= $produto['estoque_total'] ?? 0 ?></td>
                     <td><?= $produto['status_produto'] == 1 ? 'Ativo' : 'Inativo' ?></td>
-                    <td><button>Editar</button>
-                        <button>Excluir</button>
+                    <td>
+                        <a href="editar_produto.php?id=<?= $produto['id_produto'] ?>">
+                            Editar
+                        </a>
+
+                        <a href="excluir_produto.php?id=<?= $produto['id_produto'] ?>"
+                            onclick="return confirm('Tem certeza de que deseja excluir este produto?')">
+                            Excluir
+                        </a>
                     </td>
                 </tr>
 
@@ -109,7 +126,8 @@
             <tfoot>
                 <tr>
                     <td colspan="7">
-                         Mostrando 1 resultado
+                        Mostrando <?= $total_produtos ?>
+                        <?= $total_produtos == 1 ? 'resultado' : 'resultados' ?>
                         <button>&lt;</button>
                         <button>&gt;</button>
                     </td>
@@ -117,6 +135,6 @@
             </tfoot>
     </table>
 
-    <button>+ Adicionar Produto</button>
+    <a href="adicionar_produto.php">+ Adicionar Produto</a>
 </body>
 </html>
