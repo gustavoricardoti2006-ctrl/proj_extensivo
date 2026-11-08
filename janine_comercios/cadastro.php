@@ -8,12 +8,14 @@
     <title>Cadastro - Janine Cosméticos</title>
 
     <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="css/header_cliente.css">
+    <link rel="stylesheet" href="css/footer_cliente.css">
     <script src="js/api.js"></script>
 </head>
 
 <body>
 
-    <header>isa vai fazer</header>
+    <?php include('includes/header_cliente.php'); ?>
 
     <main>
 
@@ -261,7 +263,7 @@
 
     </main>
 
-    <footer>isa vai fazer</footer>
+    <?php include('includes/footer_cliente.php'); ?>
 
 </body>
 
