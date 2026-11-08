@@ -40,11 +40,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/header_cliente.css">
+    <link rel="stylesheet" href="css/footer_cliente.css">
 </head>
 
 <body>
 
-    <header>isa vai fazer</header>
+    <?php include('includes/header_cliente.php'); ?>
     <main>
 
         <!-- IMAGEM LATERAL QUE FICA DO LADO DO FORMULARIO DE LOGIN -->
@@ -97,7 +99,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
         </section>
     </main>
-    <footer>isa vai fazer</footer>
+    
+    <?php include('includes/footer_cliente.php'); ?>
 </body>
 
 </html>
