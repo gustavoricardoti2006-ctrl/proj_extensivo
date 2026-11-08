@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+/* ========================================
+   header - janine cosmeticos
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.header-cliente {
+    width: 100%;
+    background-color: #FFFFFF;
+    color: #302722;
+    font-family: 'Inter', sans-serif;
+}
+
+.header-cliente a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* barra de aviso la de cima */
+
+.barra-aviso {
+    width: 100%;
+    height: 39px;
+    background-color: #382820;
+    color: #FFFFFF;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+}
+
+/* area principal */
+
+.header-principal {
+    width: calc(100% - 48px);
+    max-width: 1550px;
+    height: 99px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.logo-icone {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #593D32;
+    color: #FFFFFF;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.logo-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.logo-texto strong {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.logo-texto small {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    color: #E98576;
+}
+
+/* pesquisa */
+
+.campo-pesquisa {
+    height: 53px;
+    flex: 1;
+    max-width: 1005px;
+
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 0 18px;
+
+    background-color: #FDFBF8;
+    border: 1px solid #E5D9CE;
+    border-radius: 10px;
+}
+
+.icone-pesquisa {
+    font-size: 20px;
+    color: #776B64;
+}
+
+.campo-pesquisa input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #302722;
+}
+
+.campo-pesquisa input::placeholder {
+    color: #9A9089;
+}
+
+.atalho-pesquisa {
+    padding: 5px 9px;
+    background-color: #F7F1E8;
+    border: 1px solid #E5D9CE;
+    border-radius: 5px;
+
+    font-size: 9px;
+    color: #776B64;
+}
+
+/* conta e carrinho */
+
+.acoes-cliente {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-shrink: 0;
+}
+
+.acao-conta,
+.acao-carrinho {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icone-acao {
+    font-size: 22px;
+    color: #382820;
+}
+
+.acao-conta span:last-child,
+.acao-carrinho span:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.acao-conta small,
+.acao-carrinho small {
+    font-size: 10px;
+    color: #776B64;
+}
+
+.acao-conta strong,
+.acao-carrinho strong {
+    font-size: 12px;
+    font-weight: 600;
+    color: #302722;
+}
+
+/* menu*/
+
+.menu-categorias {
+    width: 100%;
+    height: 58px;
+    border-bottom: 1px solid #E5D9CE;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 38px;
+}
+
+.menu-categorias a {
+    font-size: 12px;
+    color: #49382F;
+    transition: color 0.3s ease;
+}
+
+.menu-categorias a:hover {
+    color: #C96659;
+}
+
+.menu-categorias .link-ofertas {
+    color: #C96659;
+    font-weight: 600;
+}
+
+/* responsividade */
+
+@media (max-width: 1200px) {
+    .header-principal {
+        gap: 18px;
+    }
+
+    .acoes-cliente {
+        gap: 15px;
+    }
+
+    .menu-categorias {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 900px) {
+    .header-principal {
+        height: auto;
+        min-height: 90px;
+        flex-wrap: wrap;
+        padding: 15px 0;
+    }
+
+    .campo-pesquisa {
+        order: 3;
+        flex-basis: 100%;
+        max-width: none;
+    }
+
+    .menu-categorias {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding: 0 20px;
+        gap: 22px;
+    }
+
+    .menu-categorias a {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 500px) {
+    .barra-aviso {
+        font-size: 10px;
+        padding: 0 8px;
+        text-align: center;
+    }
+
+    .header-principal {
+        width: calc(100% - 30px);
+        gap: 13px;
+    }
+
+    .logo-icone {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+    }
+
+    .logo-texto strong {
+        font-size: 19px;
+    }
+
+    .acoes-cliente {
+        gap: 10px;
+    }
+
+    .acao-conta,
+    .acao-carrinho {
+        gap: 4px;
+    }
+
+    .acao-conta small,
+    .acao-carrinho small {
+        display: none;
+    }
+
+    .acao-conta strong,
+    .acao-carrinho strong {
+        font-size: 10px;
+    }
+
+    .icone-acao {
+        font-size: 19px;
+    }
+
+    .campo-pesquisa {
+        height: 43px;
+    }
+
+    .campo-pesquisa input {
+        font-size: 12px;
+    }
+
+    .atalho-pesquisa {
+        display: none;
+    }
+
+    .menu-categorias {
+        height: 45px;
+        gap: 18px;
+    }
+
+    .menu-categorias a {
+        font-size: 11px;
+    }
+}
+
+/* CORREÇÃO DO ESPAÇAMENTO SUPERIOR */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header-cliente {
+    margin: 0;
+    padding: 0;
+}
+
+.barra-aviso {
+    margin-top: 0;
+}
