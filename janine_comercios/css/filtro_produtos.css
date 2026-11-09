@@ -1,0 +1,758 @@
+/* ========================================
+   IDENTIDADE VISUAL - JANINE COSMÉTICOS
+======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+
+    /* FONTES */
+    --font-principal: 'Inter', sans-serif;
+    --font-destaque: 'DM Sans', sans-serif;
+
+    /* CORES PRINCIPAIS */
+    --marrom: #593D32;
+    --marrom-escuro: #382820;
+
+    --bege: #F7F1E8;
+    --bege-medio: #EDE0D0;
+
+    --coral: #E98576;
+    --coral-escuro: #C96659;
+
+    --branco: #FFFFFF;
+    --off-white: #FDFBF8;
+
+    /* TEXTOS E BORDAS */
+    --texto-principal: #302722;
+    --texto-secundario: #776B64;
+    --texto-preco-antigo: #9A9089;
+
+    --borda: #E5D9CE;
+
+    /* PAINEL ADMINISTRATIVO */
+    --fundo-admin: #F6F4F1;
+
+    /* CORES SEMÂNTICAS */
+    --sucesso: #34764B;
+    --sucesso-claro: #E3F1E7;
+
+    --atencao: #A96D16;
+    --atencao-claro: #FFF0D5;
+
+    --erro: #B83D3D;
+    --erro-claro: #F8E1E1;
+
+    --informacao: #68598C;
+    --informacao-claro: #EDE7F5;
+
+    --alerta-claro: #FFF6E5;
+    --info-claro: #F2F5F5;
+
+    /* PESOS DAS FONTES */
+    --peso-normal: 400;
+    --peso-medio: 500;
+    --peso-semibold: 600;
+    --peso-bold: 700;
+
+    /* TÍTULOS */
+    --titulo-banner: clamp(48px, 5.4vw, 76px);
+    --titulo-editorial: 43px;
+    --titulo-pagina: 42px;
+    --titulo-produto: 40px;
+    --titulo-secao: 32px;
+    --titulo-checkout: 29px;
+    --titulo-admin: 28px;
+
+    /* TEXTOS */
+    --texto-banner: 16px;
+    --texto-editorial: 13px;
+    --texto-produto: 13px;
+    --texto-descricao: 12px;
+    --texto-botao: 12px;
+    --texto-navegacao: 11px;
+    --texto-auxiliar: 9px;
+
+    /* ELEMENTOS ESPECÍFICOS */
+    --logo: 21px;
+    --preco-card: 16px;
+    --preco-detalhe: 28px;
+    --total-carrinho: 21px;
+    --metrica-dashboard: 23px;
+    --titulo-modal: 23px;
+
+    /* BORDAS */
+    --raio-pequeno: 4px;
+    --raio-medio: 8px;
+    --raio-grande: 12px;
+    --raio-arredondado: 50px;
+
+    /* SOMBRAS */
+    --sombra-suave: 0 2px 10px rgba(56, 40, 32, 0.06);
+    --sombra-media: 0 4px 16px rgba(56, 40, 32, 0.10);
+
+    /* TRANSIÇÕES */
+    --transicao: all 0.3s ease;
+}
+
+/* ========================================
+   VITRINE DE PRODUTOS - JANINE COSMÉTICOS
+======================================== */
+
+body {
+    font-family: var(--font-principal);
+    background: var(--off-white);
+    color: var(--texto-principal);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select {
+    font-family: var(--font-principal);
+}
+
+/* ========================================
+   ESTRUTURA PRINCIPAL
+======================================== */
+
+.pagina-produtos {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 55px 7%;
+}
+
+.conteudo-loja {
+    display: grid;
+    grid-template-columns: 210px minmax(0, 1fr);
+    gap: 35px;
+    align-items: start;
+}
+
+/* ========================================
+   CABEÇALHO DA PÁGINA
+======================================== */
+
+.titulo-pagina {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--borda);
+}
+
+.subtitulo {
+    display: block;
+    font-size: var(--texto-auxiliar);
+    font-weight: var(--peso-semibold);
+    letter-spacing: 2px;
+    color: var(--coral-escuro);
+    margin-bottom: 12px;
+}
+
+.titulo-pagina h1 {
+    font-family: var(--font-destaque);
+    font-size: var(--titulo-pagina);
+    font-weight: var(--peso-medio);
+    color: var(--marrom-escuro);
+    margin-bottom: 8px;
+}
+
+.titulo-pagina p {
+    font-size: var(--texto-descricao);
+    color: var(--texto-secundario);
+}
+
+.contador {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-left: 20px;
+    border-left: 1px solid var(--borda);
+}
+
+.contador strong {
+    font-family: var(--font-destaque);
+    font-size: var(--metrica-dashboard);
+    font-weight: var(--peso-semibold);
+    color: var(--marrom-escuro);
+}
+
+.contador span {
+    font-size: var(--texto-auxiliar);
+    color: var(--texto-secundario);
+}
+
+/* ========================================
+   BARRA LATERAL - FILTROS
+======================================== */
+
+.sidebar {
+    width: 100%;
+}
+
+.filtro-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--borda);
+}
+
+.filtro-topo h3 {
+    font-family: var(--font-destaque);
+    font-size: var(--texto-produto);
+    font-weight: var(--peso-semibold);
+    color: var(--marrom-escuro);
+}
+
+.filtro-topo a {
+    font-size: var(--texto-auxiliar);
+    color: var(--coral-escuro);
+    transition: var(--transicao);
+}
+
+.filtro-topo a:hover {
+    color: var(--marrom-escuro);
+}
+
+.grupo-filtro {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--borda);
+}
+
+.grupo-filtro h4 {
+    font-family: var(--font-destaque);
+    font-size: var(--texto-navegacao);
+    font-weight: var(--peso-semibold);
+    color: var(--marrom-escuro);
+    margin-bottom: 14px;
+}
+
+.opcao-filtro {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 12px;
+    font-size: var(--texto-auxiliar);
+    color: var(--texto-secundario);
+    cursor: pointer;
+    transition: var(--transicao);
+}
+
+.opcao-filtro:last-child {
+    margin-bottom: 0;
+}
+
+.opcao-filtro:hover {
+    color: var(--marrom);
+}
+
+.opcao-filtro input {
+    width: 13px;
+    height: 13px;
+    accent-color: var(--marrom);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.opcao-filtro span {
+    flex: 1;
+}
+
+.opcao-filtro small {
+    font-size: var(--texto-auxiliar);
+    color: var(--texto-preco-antigo);
+}
+
+/* ========================================
+   FAIXA DE PREÇO
+======================================== */
+
+.precos {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.precos input {
+    width: 45%;
+    min-width: 0;
+    padding: 9px 7px;
+    border: 1px solid var(--borda);
+    border-radius: var(--raio-pequeno);
+    background: var(--off-white);
+    color: var(--texto-principal);
+    font-size: var(--texto-auxiliar);
+    outline: none;
+    transition: var(--transicao);
+}
+
+.precos input:focus {
+    border-color: var(--marrom);
+}
+
+.precos span {
+    font-size: var(--texto-auxiliar);
+    color: var(--texto-secundario);
+}
+
+/* ========================================
+   BOTÃO APLICAR FILTROS
+======================================== */
+
+.btn-filtrar {
+    width: 100%;
+    padding: 12px;
+    margin-top: 18px;
+    border: none;
+    border-radius: var(--raio-pequeno);
+    background: var(--marrom);
+    color: var(--branco);
+    font-size: var(--texto-botao);
+    font-weight: var(--peso-semibold);
+    cursor: pointer;
+    transition: var(--transicao);
+}
+
+.btn-filtrar:hover {
+    background: var(--marrom-escuro);
+}
+
+/* ========================================
+   BARRA DE PRODUTOS
+======================================== */
+
+.barra-produtos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.barra-produtos > span {
+    font-size: var(--texto-auxiliar);
+    color: var(--texto-secundario);
+}
+
+.barra-produtos form {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.barra-produtos label {
+    font-size: var(--texto-auxiliar);
+    color: var(--texto-secundario);
+}
+
+.barra-produtos select {
+    padding: 7px;
+    border: 1px solid var(--borda);
+    border-radius: var(--raio-pequeno);
+    background: var(--off-white);
+    color: var(--marrom);
+    font-size: var(--texto-auxiliar);
+    outline: none;
+    cursor: pointer;
+}
+
+/* ========================================
+   GRADE DE PRODUTOS
+======================================== */
+
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 35px 16px;
+}
+
+.card-produto {
+    min-width: 0;
+}
+
+/* ========================================
+   IMAGEM DO PRODUTO
+======================================== */
+
+.imagem-produto {
+    width: 100%;
+    aspect-ratio: 3 / 3.65;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--raio-medio);
+    background: var(--bege-medio);
+}
+
+.imagem-produto > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.imagem-produto img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transicao);
+}
+
+.card-produto:hover .imagem-produto img {
+    transform: scale(1.04);
+}
+
+/* ========================================
+   ETIQUETA DE PROMOÇÃO
+======================================== */
+
+.etiqueta-promocao {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 5px 8px;
+    border-radius: var(--raio-pequeno);
+    background: var(--coral-escuro);
+    color: var(--branco);
+    font-size: var(--texto-auxiliar);
+    font-weight: var(--peso-semibold);
+    z-index: 2;
+}
+
+/* ========================================
+   FAVORITOS
+======================================== */
+
+.favorito {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 31px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--off-white);
+    color: var(--marrom);
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 3;
+    transition: var(--transicao);
+}
+
+.favorito:hover {
+    background: var(--coral-escuro);
+    color: var(--branco);
+}
+
+/* ========================================
+   FORMULÁRIO DO CARRINHO - HOVER
+======================================== */
+
+.form-carrinho {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: rgba(253, 251, 248, 0.96);
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transicao);
+    z-index: 2;
+}
+
+.card-produto:hover .form-carrinho,
+.card-produto:focus-within .form-carrinho {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.form-carrinho select {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid var(--borda);
+    border-radius: var(--raio-pequeno);
+    background: var(--branco);
+    color: var(--marrom);
+    font-size: var(--texto-auxiliar);
+    outline: none;
+}
+
+.form-carrinho select:focus {
+    border-color: var(--marrom);
+}
+
+.form-carrinho button {
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-radius: var(--raio-pequeno);
+    background: var(--marrom);
+    color: var(--branco);
+    font-size: var(--texto-botao);
+    font-weight: var(--peso-semibold);
+    cursor: pointer;
+    transition: var(--transicao);
+}
+
+.form-carrinho button:hover {
+    background: var(--coral-escuro);
+}
+
+.sem-variacao {
+    font-size: var(--texto-auxiliar);
+    color: var(--erro);
+    text-align: center;
+}
+
+/* ========================================
+   INFORMAÇÕES DO PRODUTO
+======================================== */
+
+.informacoes-produto {
+    padding: 12px 2px;
+}
+
+.marca-produto {
+    display: block;
+    margin-bottom: 7px;
+    font-size: var(--texto-auxiliar);
+    font-weight: var(--peso-medium);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--texto-secundario);
+}
+
+.nome-produto {
+    display: block;
+    margin-bottom: 9px;
+    font-family: var(--font-destaque);
+    font-size: var(--texto-produto);
+    font-weight: var(--peso-medio);
+    color: var(--marrom-escuro);
+    transition: var(--transicao);
+}
+
+.nome-produto:hover {
+    color: var(--coral-escuro);
+}
+
+/* ========================================
+   PREÇOS
+======================================== */
+
+.preco-produto {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    flex-wrap: wrap;
+}
+
+.preco-produto strong {
+    font-family: var(--font-destaque);
+    font-size: var(--preco-card);
+    font-weight: var(--peso-semibold);
+    color: var(--marrom-escuro);
+}
+
+.preco-produto del {
+    font-size: var(--texto-auxiliar);
+    color: var(--texto-preco-antigo);
+}
+
+/* ========================================
+   NENHUM PRODUTO ENCONTRADO
+======================================== */
+
+.sem-produtos {
+    grid-column: 1 / -1;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.sem-produtos h2 {
+    margin-bottom: 10px;
+    font-family: var(--font-destaque);
+    font-size: var(--titulo-secao);
+    color: var(--marrom-escuro);
+}
+
+.sem-produtos p {
+    margin-bottom: 15px;
+    font-size: var(--texto-descricao);
+    color: var(--texto-secundario);
+}
+
+.sem-produtos a {
+    font-size: var(--texto-botao);
+    color: var(--coral-escuro);
+}
+
+.sem-produtos a:hover {
+    color: var(--marrom-escuro);
+}
+
+
+/* ========================================
+   PAGINAÇÃO
+======================================== */
+
+.paginacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 45px 0 30px;
+}
+
+.pagina-numero,
+.pagina-seta {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--borda);
+    border-radius: var(--raio-pequeno);
+
+    background: var(--branco);
+    color: var(--marrom);
+
+    font-family: var(--font-principal);
+    font-size: 10px;
+    font-weight: var(--peso-medio);
+
+    transition: var(--transicao);
+}
+
+.pagina-numero:hover,
+.pagina-seta:hover {
+    background: var(--bege);
+    border-color: var(--marrom);
+}
+
+.pagina-numero.ativa {
+    background: var(--marrom);
+    border-color: var(--marrom);
+    color: var(--branco);
+}
+
+.pagina-seta {
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.paginacao-pontos {
+    font-size: 11px;
+    color: var(--texto-secundario);
+    padding: 0 3px;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE - TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+    .pagina-produtos {
+        padding: 35px 4%;
+    }
+
+    .conteudo-loja {
+        grid-template-columns: 175px minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .grade-produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .titulo-pagina h1 {
+        font-size: 34px;
+    }
+}
+
+/* ========================================
+   RESPONSIVIDADE - CELULAR
+======================================== */
+
+@media (max-width: 600px) {
+
+    .pagina-produtos {
+        padding: 25px 5%;
+    }
+
+    .titulo-pagina {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .titulo-pagina h1 {
+        font-size: 27px;
+    }
+
+    .titulo-pagina p {
+        max-width: 230px;
+    }
+
+    .contador {
+        padding-left: 10px;
+    }
+
+    .contador strong {
+        font-size: 19px;
+    }
+
+    .conteudo-loja {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .grade-produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px 10px;
+    }
+
+    .barra-produtos {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .imagem-produto {
+        aspect-ratio: 3 / 3.8;
+    }
+
+    /* Compra sempre acessível em telas touch */
+
+    .form-carrinho {
+        position: static;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        padding: 8px;
+    }
+
+    .form-carrinho select {
+        font-size: 10px;
+    }
+
+    .form-carrinho button {
+        font-size: 10px;
+        padding: 9px 5px;
+    }
+}
