@@ -1,0 +1,280 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+:root {
+    --navbar-width: 93px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f3f0;
+    color: #382d28;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+.conteudo {
+    margin-left: var(--navbar-width);
+    padding: 40px 33px;
+    min-height: calc(100vh - 72px);
+}
+
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.perfil img {
+    width: 22px;
+    height: 22px;
+}
+
+/* TÍTULO */
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.cabecalho h2 {
+    color: #e96f60;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.cabecalho h1 {
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.cabecalho p {
+    font-size: 12px;
+    color: #85766e;
+}
+
+/* BOTÃO ADICIONAR */
+
+.btn-adicionar {
+    background-color: #ed8375;
+    color: #241c18;
+    text-decoration: none;
+
+    padding: 16px 25px;
+    border-radius: 10px;
+
+    font-size: 13px;
+}
+
+.btn-adicionar {
+    transition: background-color 0.2s;
+}
+
+.btn-adicionar:hover {
+    background-color: #df7568;
+}
+
+/* PESQUISA E FILTROS */
+
+
+/* CAMPOS DE PESQUISA E SELEÇÃO */
+
+.filtros {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.filtros input {
+    width: 470px;
+    min-width: 470px;
+    height: 47px;
+    border: 1px solid #e5d4c8;
+    border-radius: 10px;
+    padding: 0 18px;
+    font-size: 15px;
+}
+
+.filtros select {
+    width: 165px;
+    height: 47px;
+    padding: 0 15px;
+    border: 1px solid #e5d4c8;
+    border-radius: 10px;
+    background-color: white;
+    color: #382d28;
+    cursor: pointer;
+}
+
+.filtros input:focus,
+.filtros select:focus {
+    outline: none;
+    border-color: #ed8375;
+}
+
+.btn-filtrar {
+    width: 115px;
+    height: 47px;
+    border: 1px solid #e5d4c8;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* TABELA */
+
+.tabela-container {
+    background-color: white;
+    border: 1px solid #e5d4c8;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead {
+    background-color: #fcfaf8;
+}
+
+th {
+    font-size: 10px;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 16px;
+}
+
+td {
+    padding: 22px 16px;
+    border-top: 1px solid #eee3dc;
+    font-size: 12px;
+}
+
+.produto-nome {
+    font-weight: bold;
+}
+
+.produto-nome p {
+    font-size: 10px;
+    font-weight: normal;
+    color: #897c74;
+    margin-top: 5px;
+}
+
+.preco-promocional {
+    color: #e96f60;
+    font-size: 10px;
+    margin-top: 4px;
+}
+
+/* STATUS */
+
+.status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 10px;
+}
+
+.status.ativo {
+    background-color: #e2f2e7;
+    color: #267342;
+}
+
+.status.inativo {
+    background-color: #f9dddd;
+    color: #bd3030;
+}
+
+/* AÇÕES */
+
+.acoes {
+    white-space: nowrap;
+}
+
+.acoes a {
+    display: inline-block;
+    margin-right: 15px;
+    color: #49352d;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.acoes .excluir img {
+    width: 24px;
+    height: 24px;
+    filter: invert(24%) sepia(91%) saturate(4000%)
+            hue-rotate(350deg) brightness(95%) contrast(95%);
+}
+
+/* RODAPÉ E PAGINAÇÃO */
+
+/* PAGINAÇÃO */
+
+tfoot td {
+    padding: 12px 15px;
+    height: 55px;
+    vertical-align: middle;
+}
+
+.info-paginacao {
+    color: #85766e;
+    font-size: 11px;
+}
+
+.paginacao {
+    float: right;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.paginacao a,
+.paginacao span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid #e5d4c8;
+    border-radius: 8px;
+
+    background-color: white;
+    color: #49352d;
+
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.paginacao a:hover {
+    background-color: #f6eee9;
+}
+
+.paginacao .pagina-atual {
+    background-color: #593e33;
+    color: white;
+    border-color: #593e33;
+}
+
+.paginacao .desabilitado {
+    color: #b9aaa1;
+    cursor: not-allowed;
+}

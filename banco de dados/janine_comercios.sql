@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 20/10/2026 às 00:44
+-- Tempo de geração: 10/11/2026 às 00:39
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -67,7 +67,10 @@ CREATE TABLE `categorias` (
 --
 
 INSERT INTO `categorias` (`id_categorias`, `nome_cat`, `descricao`, `ativo`) VALUES
-(1, 'Roupas Masculinas', '', 'ativo');
+(1, 'Roupas Masculinas', '', 'ativo'),
+(2, 'BodySplash', 'BodySplash', 'ativo'),
+(3, 'Batom', 'Batom', 'ativo'),
+(4, 'Rímel', 'Rímel', 'ativo');
 
 -- --------------------------------------------------------
 
@@ -196,15 +199,20 @@ CREATE TABLE `produto` (
   `preco` decimal(10,2) NOT NULL,
   `preco_promocional` decimal(10,2) DEFAULT NULL,
   `imagem_produto` varchar(120) DEFAULT NULL,
-  `data_cadastro` datetime NOT NULL
+  `data_cadastro` datetime NOT NULL,
+  `preco_compra` decimal(10,2) NOT NULL DEFAULT 0.00
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `produto`
 --
 
-INSERT INTO `produto` (`id_produto`, `id_categoria`, `nome_prod`, `descricao`, `marca`, `preco`, `preco_promocional`, `imagem_produto`, `data_cadastro`) VALUES
-(1, 1, 'Casaco da Nike', '', 'Nike', 200.00, 0.00, NULL, '2026-10-20 00:00:40');
+INSERT INTO `produto` (`id_produto`, `id_categoria`, `nome_prod`, `descricao`, `marca`, `preco`, `preco_promocional`, `imagem_produto`, `data_cadastro`, `preco_compra`) VALUES
+(1, 1, 'Casaco da Nike', '', 'Nike', 100.00, 90.00, NULL, '2026-10-20 00:00:40', 120.00),
+(2, 2, 'BodySplash Wepink', 'Body Splash Wepink Obsessed Original 200ml', 'WePink', 39.99, 39.99, NULL, '2026-11-10 00:01:08', 50.00),
+(3, 4, 'Máscara De Cílios Up', 'Máscara De Cílios Up! Volume Preta', 'Lf Pro', 49.90, 49.90, NULL, '2026-11-10 00:02:01', 60.00),
+(4, 3, 'Batom Líquido Vizzela', 'Batom Líquido Vizzela', 'Vizella', 39.90, 39.90, NULL, '2026-11-10 00:02:48', 50.00),
+(5, 1, 'Bermuda Reliquia', 'Off-white with unbelivable drip', 'Louis Vitton', 1000.00, 979.99, NULL, '2026-11-10 00:03:53', 2000.00);
 
 -- --------------------------------------------------------
 
@@ -340,7 +348,7 @@ ALTER TABLE `carrinhos`
 -- AUTO_INCREMENT de tabela `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id_categorias` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_categorias` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `clientes`
@@ -388,7 +396,7 @@ ALTER TABLE `pedidos`
 -- AUTO_INCREMENT de tabela `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `variacoes_produto`
