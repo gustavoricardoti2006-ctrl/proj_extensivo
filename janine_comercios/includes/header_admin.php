@@ -13,7 +13,7 @@
             </svg>
         </a>
 
-        <a href="#" class="admin-menu-item" title="Produtos">
+        <a href="produtos_adm.php" class="admin-menu-item" title="Produtos">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 2 21 7 12 12 3 7 12 2Z"/>
                 <path d="M3 7v10l9 5 9-5V7"/>
@@ -39,7 +39,7 @@
             </svg>
         </a>
 
-        <a href="#" class="admin-menu-item" title="Relatórios">
+        <a href="relatorios_adm.php" class="admin-menu-item" title="Relatórios">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M3 3v18h18"/>
                 <path d="M8 16V9"/>
