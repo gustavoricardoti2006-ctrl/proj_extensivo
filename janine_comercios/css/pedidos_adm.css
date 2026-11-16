@@ -1,0 +1,404 @@
+/* CONTAINER PRINCIPAL */
+
+.pedidos-container {
+    margin-left: 93px;
+    padding: 10px 36px 45px;
+    min-height: calc(100vh - 83px);
+    background-color: #F8F6F4;
+    color: #302722;
+    font-family: 'Inter', sans-serif;
+}
+
+/* INTRODUÇÃO */
+
+.pedidos-intro {
+    margin-bottom: 35px;
+}
+
+.pedidos-etiqueta {
+    display: block;
+    color: #D86E5F;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    margin-bottom: 17px;
+}
+
+.pedidos-intro h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0 0 13px;
+}
+
+.pedidos-intro p {
+    font-size: 11px;
+    color: #88766D;
+    margin: 0;
+}
+
+/* ABAS */
+
+.pedidos-abas {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    border-bottom: 1px solid #E7D9CD;
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+.aba-pedido {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    padding: 12px 0 14px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    background: transparent;
+    color: #88766D;
+    font-family: inherit;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.aba-pedido span {
+    background: #F0EAE5;
+    border-radius: 20px;
+    padding: 4px 7px;
+    color: #75645A;
+    font-size: 9px;
+}
+
+.aba-pedido.ativo {
+    border-bottom-color: #E98576;
+    color: #4A3025;
+    font-weight: 700;
+}
+
+.aba-pedido:hover {
+    color: #D86E5F;
+}
+
+/* FILTROS */
+
+.pedidos-filtros {
+    display: grid;
+    grid-template-columns: minmax(200px, 2.5fr) 0.87fr 0.87fr auto;
+    gap: 11px;
+    margin-bottom: 17px;
+}
+
+.campo-busca {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #FFFFFF;
+    border: 1px solid #E8D7C9;
+    border-radius: 12px;
+    padding: 0 20px;
+    min-height: 52px;
+}
+
+.campo-busca svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: #88766D;
+}
+
+.campo-busca input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #302722;
+    font-family: inherit;
+    font-size: 17px;
+}
+
+.campo-busca input::placeholder {
+    color: #A49790;
+}
+
+.campo-data,
+.campo-status,
+.btn-filtrar {
+    min-height: 52px;
+    padding: 0 16px;
+    background: #FFFFFF;
+    border: 1px solid #E8D7C9;
+    border-radius: 11px;
+    font-family: inherit;
+    font-size: 12px;
+    color: #4A3025;
+}
+
+.campo-data,
+.campo-status {
+    width: 100%;
+    min-width: 0;
+    cursor: pointer;
+}
+
+.btn-filtrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-width: 125px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-filtrar svg {
+    width: 20px;
+    height: 20px;
+}
+
+.btn-filtrar:hover {
+    border-color: #E98576;
+    background: #FFF9F6;
+}
+
+/* TABELA */
+
+.pedidos-tabela-card {
+    background: #FFFFFF;
+    border: 1px solid #E8D7C9;
+    border-radius: 13px;
+    overflow: hidden;
+}
+
+.pedidos-tabela-scroll {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.pedidos-tabela {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.pedidos-tabela thead {
+    background: #FCFAF8;
+}
+
+.pedidos-tabela th {
+    padding: 15px 18px;
+    font-size: 9px;
+    font-weight: 700;
+    color: #88766D;
+    letter-spacing: 0.3px;
+}
+
+.pedidos-tabela td {
+    padding: 14px 18px;
+    height: 54px;
+    font-size: 10px;
+    border-top: 1px solid #F0E7E0;
+}
+
+.pedidos-tabela tbody tr:hover {
+    background-color: #FFFAF7;
+}
+
+.pedido-id {
+    font-weight: 700;
+}
+
+.pedidos-tabela th:last-child,
+.pedidos-tabela td:last-child {
+    text-align: center;
+    width: 70px;
+}
+
+/* STATUS */
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 11px;
+    border-radius: 20px;
+    font-size: 9px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status-badge.aguardando {
+    background: #FFF0D5;
+    color: #946000;
+}
+
+.status-badge.separacao {
+    background: #E5F1F3;
+    color: #356C7C;
+}
+
+.status-badge.enviado {
+    background: #EEE7F5;
+    color: #755695;
+}
+
+.status-badge.entregue {
+    background: #E5F3E7;
+    color: #378052;
+}
+
+.status-badge.cancelado {
+    background: #F0ECEA;
+    color: #806F68;
+}
+
+/* AÇÕES */
+
+.pedido-acoes {
+    background: transparent;
+    border: none;
+    color: #302722;
+    font-size: 17px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.pedido-acoes:hover {
+    color: #E98576;
+}
+
+/* PAGINAÇÃO */
+
+.pedidos-paginacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 14px 18px;
+    border-top: 1px solid #E8D7C9;
+}
+
+.pedidos-paginacao p {
+    font-size: 10px;
+    color: #88766D;
+}
+
+.paginacao-botoes {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.numeros-paginas {
+    display: flex;
+    gap: 7px;
+}
+
+.paginacao-botoes button {
+    min-width: 32px;
+    height: 32px;
+    padding: 0 8px;
+    border: 1px solid #E8D7C9;
+    border-radius: 9px;
+    background: #FFFFFF;
+    color: #88766D;
+    font-family: inherit;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.paginacao-botoes button.ativo {
+    background: #5B4035;
+    border-color: #5B4035;
+    color: #FFFFFF;
+}
+
+.paginacao-botoes button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* AVISO INFERIOR */
+
+.pedidos-aviso {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+    max-width: 710px;
+    margin-top: 15px;
+    padding: 18px;
+    background: #F0F4F3;
+    border: 1px solid #D4E3E1;
+    border-radius: 11px;
+    color: #355D5B;
+}
+
+.pedidos-aviso svg {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.pedidos-aviso strong {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.pedidos-aviso p {
+    font-size: 11px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1100px) {
+
+    .pedidos-filtros {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .campo-busca {
+        grid-column: 1 / -1;
+    }
+
+    .btn-filtrar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .pedidos-container {
+        padding: 20px 16px 35px;
+    }
+
+    .pedidos-intro h1 {
+        font-size: 25px;
+    }
+
+    .pedidos-abas {
+        gap: 20px;
+    }
+
+    .pedidos-filtros {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-busca {
+        grid-column: auto;
+    }
+
+    .pedidos-paginacao {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pedidos-aviso {
+        padding: 15px;
+    }
+}
