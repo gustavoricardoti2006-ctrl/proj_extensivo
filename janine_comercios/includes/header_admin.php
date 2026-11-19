@@ -54,7 +54,7 @@ $paginaAtual = basename($_SERVER['SCRIPT_NAME']);
 
     </nav>
 
-    <a href="#" class="admin-sair" title="Sair">
+    <a href="cadastro.php" class="admin-sair" title="Sair">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <path d="M10 17l5-5-5-5"/>
             <path d="M15 12H3"/>

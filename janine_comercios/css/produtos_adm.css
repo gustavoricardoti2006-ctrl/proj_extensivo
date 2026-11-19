@@ -278,3 +278,80 @@ tfoot td {
     color: #b9aaa1;
     cursor: not-allowed;
 }
+
+form {
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.variacao {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 18px;
+    margin-top: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+}
+
+#adicionar-variacao {
+    background-color: #382d28;
+    color: white;
+}
+
+.remover-variacao {
+    background-color: #e9786c;
+    color: white;
+}
+
+.titulo-formulario {
+    max-width: 700px;
+    margin: 10px auto 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-fechar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #382d28;
+    font-size: 25px;
+    transition: 0.2s;
+}
+
+.btn-fechar:hover {
+    background-color: #e9786c;
+    color: white;
+}
