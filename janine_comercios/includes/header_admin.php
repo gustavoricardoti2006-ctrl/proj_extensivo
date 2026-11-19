@@ -1,10 +1,14 @@
+<?php
+$paginaAtual = basename($_SERVER['SCRIPT_NAME']);
+?>
+
 <aside class="admin-sidebar">
 
     <a href="#" class="admin-logo" title="Janine Cosméticos">J</a>
 
     <nav class="admin-menu">
 
-        <a href="#" class="admin-menu-item ativo" title="Dashboard">
+        <a href="#" class="admin-menu-item <?= $paginaAtual == 'dashboard_adm.php' ? 'ativo' : '' ?>" title="Dashboard">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="3" y="3" width="7" height="7" rx="1"/>
                 <rect x="14" y="3" width="7" height="7" rx="1"/>
@@ -13,7 +17,7 @@
             </svg>
         </a>
 
-        <a href="produtos_adm.php" class="admin-menu-item" title="Produtos">
+        <a href="produtos_adm.php" class="admin-menu-item <?= $paginaAtual == 'produtos_adm.php' ? 'ativo' : '' ?>" title="Produtos">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 2 21 7 12 12 3 7 12 2Z"/>
                 <path d="M3 7v10l9 5 9-5V7"/>
@@ -21,7 +25,7 @@
             </svg>
         </a>
 
-        <a href="#" class="admin-menu-item" title="Vendas">
+        <a href="#" class="admin-menu-item <?= $paginaAtual == 'vendas_adm.php' ? 'ativo' : '' ?>" title="Vendas">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M3 3v18h18"/>
                 <path d="M8 16V9"/>
@@ -30,7 +34,7 @@
             </svg>
         </a>
 
-        <a href="pedidos_adm.php" class="admin-menu-item" title="Pedidos">
+        <a href="pedidos_adm.php" class="admin-menu-item <?= $paginaAtual == 'pedidos_adm.php' ? 'ativo' : '' ?>" title="Pedidos">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="5" y="3" width="14" height="18" rx="2"/>
                 <path d="M9 8h6"/>
@@ -39,7 +43,7 @@
             </svg>
         </a>
 
-        <a href="relatorios_adm.php" class="admin-menu-item" title="Relatórios">
+        <a href="relatorios_adm.php" class="admin-menu-item <?= $paginaAtual == 'relatorios_adm.php' ? 'ativo' : '' ?>" title="Relatórios">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M3 3v18h18"/>
                 <path d="M8 16V9"/>
@@ -78,19 +82,3 @@
     </div>
 
 </header>
-
-<script>
-document.querySelectorAll('.admin-menu-item').forEach(function(item) {
-
-    item.addEventListener('click', function() {
-
-        document.querySelectorAll('.admin-menu-item').forEach(function(link) {
-            link.classList.remove('ativo');
-        });
-
-        this.classList.add('ativo');
-
-    });
-
-});
-</script>
