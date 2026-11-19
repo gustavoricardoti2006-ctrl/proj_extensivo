@@ -9,7 +9,7 @@
     <!-- principal -->
     <div class="header-principal">
 
-        <a href="#" class="logo">
+        <a href="tela_inicial.php" class="logo">
             <span class="logo-icone">J</span>
 
             <span class="logo-texto">
