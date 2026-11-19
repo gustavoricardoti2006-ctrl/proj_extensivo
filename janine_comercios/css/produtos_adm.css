@@ -355,3 +355,176 @@ button {
     background-color: #e9786c;
     color: white;
 }
+
+
+.formulario-produto {
+    max-width: 700px;
+    margin: 10px auto 40px;
+}
+
+.titulo-formulario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.titulo-formulario h2 {
+    margin: 0;
+}
+
+.btn-fechar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #382d28;
+    font-size: 25px;
+}
+
+.btn-fechar:hover {
+    background-color: #e9786c;
+    color: white;
+}
+
+.form-produto {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+}
+
+.form-produto label {
+    margin-top: 8px;
+}
+
+.form-produto input,
+.form-produto textarea,
+.form-produto select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.form-produto textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.acoes-formulario {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.btn-cancelar,
+.btn-salvar {
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-cancelar {
+    background-color: #e8e1dc;
+    color: #382d28;
+}
+
+.btn-salvar {
+    background-color: #ed8375;
+    color: white;
+}
+
+.conteudo {
+    margin-left: 85px;
+    padding: 30px 40px;
+    min-height: calc(100vh - 78px);
+    box-sizing: border-box;
+    background-color: #f6f3f0;
+}
+
+/* Formulário */
+.formulario-produto {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto 40px;
+}
+
+/* Título */
+.titulo-formulario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.titulo-formulario h2 {
+    margin: 0;
+    color: #382d28;
+}
+
+/* Campos */
+.form-produto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    width: 100%;
+}
+
+.form-produto label {
+    display: block;
+    margin-top: 8px;
+}
+
+.form-produto input,
+.form-produto textarea,
+.form-produto select {
+    display: block;
+    width: 100%;
+    padding: 11px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 14px;
+}
+
+.form-produto textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+/* Botão fechar */
+.btn-fechar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #382d28;
+    font-size: 25px;
+}
+
+.btn-fechar:hover {
+    background-color: #e9786c;
+    color: white;
+}
+
+/* Botões */
+.acoes-formulario {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 20px;
+}
