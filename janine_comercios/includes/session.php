@@ -9,7 +9,5 @@ if (!isset($_SESSION['sessao'])) {
     
     exit;
 }
-else{
-    echo $_SESSION['sessao'];
-}
+
 ?>
