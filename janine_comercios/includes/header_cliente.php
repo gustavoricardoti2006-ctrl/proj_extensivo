@@ -62,14 +62,14 @@
     <!-- menu -->
     <nav class="menu-categorias">
 
-        <a href="#">Novidades</a>
-        <a href="#">Maquiagem</a>
-        <a href="#">Perfumes</a>
-        <a href="#">Cabelos</a>
-        <a href="#">Feminino</a>
-        <a href="#">Masculino</a>
-        <a href="#">Plus size</a>
-        <a href="#" class="link-ofertas">✧ Ofertas</a>
+        <a href="filtro_produto.php">Novidades</a>
+        <a href="filtro_produto.php">Maquiagem</a>
+        <a href="filtro_produto.php">Perfumes</a>
+        <a href="filtro_produto.php">Cabelos</a>
+        <a href="filtro_produto.php">Feminino</a>
+        <a href="filtro_produto.php">Masculino</a>
+        <a href="filtro_produto.php">Plus size</a>
+        <a href="filtro_produto.php" class="link-ofertas">✧ Ofertas</a>
 
     </nav>
 
