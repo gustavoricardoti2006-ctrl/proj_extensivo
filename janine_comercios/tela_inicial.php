@@ -3,7 +3,7 @@
 require_once 'includes/conexao.php';
 
 // Buscar os produtos cadastrados no banco de dados (limitados a 8 para a home)
-$sql = "SELECT * FROM produtos ORDER BY id DESC LIMIT 8";
+$sql = "SELECT * FROM produto ORDER BY id_produto DESC LIMIT 8";
 $result = $con->query($sql);
 ?>
 <!DOCTYPE html>
@@ -49,9 +49,9 @@ $result = $con->query($sql);
                 <?php
                 if ($result && $result->num_rows > 0) {
                     while($produto = $result->fetch_assoc()) {
-                        $nome = htmlspecialchars($produto['nome'] ?? 'Produto sem nome');
-                        $preco = number_format($produto['preco'] ?? 0, 2, ',', '.');
-                        $imagem = htmlspecialchars($produto['imagem'] ?? 'img/placeholder.png');
+                        $nome = htmlspecialchars($produto['nome_prod'] ?? 'Produto sem nome');
+                        $preco = number_format($produto['preco_promocional'] ?? 0, 2, ',', '.');
+                        $imagem = htmlspecialchars($produto['imagem_produto'] ?? 'img/placeholder.png');
                 ?>
                     <div class="card-produto">
                         <div class="card-imagem">
